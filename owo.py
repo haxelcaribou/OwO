@@ -9,7 +9,8 @@ prefixes = (
     "Huohhhh. ",
     "OWO ",
     "OwO ",
-    "UwU "
+    "UwU ",
+    "Whats this? "
 )
 
 suffixes = (
@@ -26,6 +27,7 @@ suffixes = (
     " (；ω；)",
     " (｀へ´)",
     " ._.",
+    " *nuzzles u*",
     " :3",
     " :D",
     " :P",
@@ -39,14 +41,15 @@ suffixes = (
     " XDDD",
     " ^-^",
     " ^_^",
-    " x3",
+    " x3c",
     " x3",
     " xD",
     " ÙωÙ",
     " ʕʘ‿ʘʔ",
     " ㅇㅅㅇ",
     ", fwendo",
-    "（＾ｖ＾）"
+    "（＾ｖ＾）",
+    " nya~"
 )
 
 substitutions = {
@@ -55,15 +58,21 @@ substitutions = {
     "R": "W",
     "L": "W",
     # "ow": "OwO",
+    "th ": "f",
     "no": "nu",
+    "No": "Nu",
     "has": "haz",
+    "Has": "Haz",
     "have": "haz",
+    "Have": "Haz",
     " says": " sez",
     "you": "uu",
     "I\"ve": "I",
     "the ": "da ",
     "The ": "Da ",
-    "THE ": "THE "
+    "THE ": "THE ",
+    "qu": "qw",
+    "Qu": "Qw"
 }
 
 
