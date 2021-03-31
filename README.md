@@ -4,7 +4,7 @@ This is a port of @zuzak's JavaScript [OWO](https://github.com/zuzak/owo) into P
 
 # Install
 
-1.  Run the command `pip install owo`.
+1.  Run the command `pip install text-to-owo`.
 2.  Add `import owo` to the beginning of your script.
 
 # Usage
