@@ -13,7 +13,7 @@ The three available methods are `add_affixes`, `substitute`, and `owo`.
 
 Each takes exactly one argument, which is the string to be owoified.
 
-
+<br/>
 
 `add_affixes` will append a random prefix and suffix to the beginning and end of the string.
 
