@@ -8,7 +8,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="text-to-owo",
-    version="1.0.3",
+    version="1.1.0",
     author="Pie Thrower",
     author_email="piethrowerchamp@gmail.com",
     description="Translates normal text into OwO speak. Port from Zuzak's javascript version",
@@ -19,7 +19,10 @@ setup(
     entry_points="""
         [console_scripts]
         owo = owo:owo
+        c = owo:owo
         substitute = owo:substitute
         add_affixes = owo:add_affixes
+        add_prefix = owo:add_prefix
+        add_suffix = owo:add_suffix
     """
 )

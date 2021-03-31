@@ -16,3 +16,7 @@ for x in subs:
 
 str = "123456789"
 print(len(owo.add_affixes(str)) >= len(str))
+
+print(owo.add_prefix(str,prefixes=("test",)) == "test"+str)
+print(owo.add_suffix(str,suffixes=("test",)) == str+"test")
+print(owo.substitute(str,substitutions={"123":"abc"}) == "abc456789")

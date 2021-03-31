@@ -1,4 +1,3 @@
-import sys
 import random
 
 prefixes = (
@@ -68,15 +67,23 @@ substitutions = {
 }
 
 
-def add_affixes(str):
+def add_prefix(str, prefixes=prefixes):
+    return random.choice(prefixes) + str
+
+
+def add_suffix(str, suffixes=suffixes):
+    return str + random.choice(suffixes)
+
+
+def add_affixes(str, prefixes=prefixes, suffixes=suffixes):
     return random.choice(prefixes) + str + random.choice(suffixes)
 
 
-def substitute(str):
+def substitute(str, substitutions=substitutions):
     for sub in substitutions:
         str = str.replace(sub, substitutions[sub])
     return str
 
 
-def owo(str):
-    return add_affixes(substitute(str))
+def owo(str, substitutions=substitutions, prefixes=prefixes, suffixes=suffixes):
+    return add_affixes(substitute(str, substitutions=substitutions), prefixes=prefixes, suffixes=suffixes)
