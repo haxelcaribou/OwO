@@ -20,7 +20,6 @@ setup(
     entry_points="""
         [console_scripts]
         owo = owo:owo
-        c = owo:owo
         substitute = owo:substitute
         add_affixes = owo:add_affixes
         add_prefix = owo:add_prefix

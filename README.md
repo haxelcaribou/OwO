@@ -40,7 +40,6 @@ Custom substitutions are optional and must be passed as dictionary in the form `
 
 Both substitutes and adds prefixes and suffixes.
 Optional prefixes, suffixes, and substitutions are the same as in other methods.
-Also can be called using `owo.c(...)`
 
 <br/>
 
