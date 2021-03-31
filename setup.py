@@ -8,7 +8,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="text-to-owo",
-    version="1.1.1",
+    version="1.1.2",
     author="Pie Thrower",
     author_email="piethrowerchamp@gmail.com",
     description="Translates normal text into OwO speak. Port from Zuzak's javascript version",
