@@ -58,7 +58,7 @@ substitutions = {
     "R": "W",
     "L": "W",
     # "ow": "OwO",
-    "th ": "f",
+    "th ": "f ",
     "no": "nu",
     "No": "Nu",
     "has": "haz",
