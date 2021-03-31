@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import sys
 import random
 
@@ -82,22 +80,3 @@ def substitute(str):
 
 def owo(str):
     return add_affixes(substitute(str))
-
-
-### Tests ###
-# subs = {
-#     "l": "w",
-#     "lllll": "wwwww",
-#     "r": "w",
-#     "rrrrr": "wwwww",
-#     "rlrlrl": "wwwwww",
-#     "notification": "nutification",
-#     "MPs reject Theresa May's revised EU withdrawal deal, throwing UK's Brexit plans into confusion":
-#     "MPs weject Thewesa May's wevised EU withdwawaw deaw, thwowing UK's Bwexit pwans into confusion"
-# }
-#
-# for x in subs:
-#     print(substitute(x) == subs[x])
-#
-# str = "123456789"
-# print(len(add_affixes(str)) >= len(str))
