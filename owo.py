@@ -53,6 +53,8 @@ suffixes = (
 )
 
 substitutions = {
+    "love" : "wuv",
+    "Love" : "Wuv",
     "r": "w",
     "l": "w",
     "R": "W",
