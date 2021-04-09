@@ -43,7 +43,7 @@ Optional prefixes, suffixes, and substitutions are the same as in other methods.
 
 <br/>
 
-For all optional arguments the given interable/dict will replace the default values, not add to them.
+For all optional arguments the given iterable/dict will replace the default values, not add to them.
 
 If you pass in variables with the wrong data types I have no idea what will happen so don't do that.
 
