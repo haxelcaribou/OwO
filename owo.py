@@ -1,5 +1,7 @@
 import random
 
+# TODO: Add blocklist for bad words
+
 prefixes = (
     "<3 ",
     "0w0 ",
@@ -53,8 +55,10 @@ suffixes = (
 )
 
 substitutions = {
-    "love" : "wuv",
-    "Love" : "Wuv",
+    "love": "wuv", # keep before l->w
+    "Love": "Wuv",
+    "loving": "wuving",
+    "Loving": "Wuving",
     "r": "w",
     "l": "w",
     "R": "W",
@@ -74,7 +78,11 @@ substitutions = {
     "The ": "Da ",
     "THE ": "THE ",
     "qu": "qw",
-    "Qu": "Qw"
+    "Qu": "Qw",
+    "pause ": "paws ",
+    "Pause ": "Paws ",
+    "paus": "paws",
+    "Paus": "paws"
 }
 
 
