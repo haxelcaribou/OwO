@@ -1,6 +1,8 @@
 import random
 
-# TODO: Add blocklist for bad words
+# TODO:
+# Add blocklist for bad words
+# Simpler way to handle uppercase ~ Use .title() and .upper()?
 
 prefixes = (
     "<3 ",
@@ -72,17 +74,18 @@ substitutions = {
     "have": "haz",
     "Have": "Haz",
     " says": " sez",
+    " Says": " Sez",
     "you": "uu",
-    "I\"ve": "I",
+    "i've": "i",
+    "I've": "I",
     "the ": "da ",
     "The ": "Da ",
-    "THE ": "THE ",
     "qu": "qw",
     "Qu": "Qw",
     "pause ": "paws ",
     "Pause ": "Paws ",
     "paus": "paws",
-    "Paus": "paws"
+    "Paus": "Paws"
 }
 
 
