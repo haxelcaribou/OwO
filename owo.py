@@ -4,7 +4,7 @@ import random
 # Add blocklist for bad words
 # Simpler way to handle uppercase ~ Use .title() and .upper()?
 
-prefixes = (
+PREFIXES = (
     "<3 ",
     "0w0 ",
     "H-hewwo?? ",
@@ -17,7 +17,7 @@ prefixes = (
     "Whats this? "
 )
 
-suffixes = (
+SUFFIXES = (
     " ( ͡° ᴥ ͡°)",
     " (இωஇ )",
     " (๑•́ ₃ •̀๑)",
@@ -56,8 +56,8 @@ suffixes = (
     " nya~"
 )
 
-substitutions = {
-    "love": "wuv", # keep before l->w
+SUBSTITUTIONS = {
+    "love": "wuv",  # keep before l->w
     "Love": "Wuv",
     "loving": "wuving",
     "Loving": "Wuving",
@@ -89,23 +89,23 @@ substitutions = {
 }
 
 
-def add_prefix(str, prefixes=prefixes):
+def add_prefix(str, prefixes=PREFIXES):
     return random.choice(prefixes) + str
 
 
-def add_suffix(str, suffixes=suffixes):
+def add_suffix(str, suffixes=SUFFIXES):
     return str + random.choice(suffixes)
 
 
-def add_affixes(str, prefixes=prefixes, suffixes=suffixes):
+def add_affixes(str, prefixes=PREFIXES, suffixes=SUFFIXES):
     return random.choice(prefixes) + str + random.choice(suffixes)
 
 
-def substitute(str, substitutions=substitutions):
+def substitute(str, substitutions=SUBSTITUTIONS):
     for sub in substitutions:
         str = str.replace(sub, substitutions[sub])
     return str
 
 
-def owo(str, substitutions=substitutions, prefixes=prefixes, suffixes=suffixes):
+def owo(str, substitutions=SUBSTITUTIONS, prefixes=PREFIXES, suffixes=SUFFIXES):
     return add_affixes(substitute(str, substitutions=substitutions), prefixes=prefixes, suffixes=suffixes)

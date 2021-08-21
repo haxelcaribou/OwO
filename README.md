@@ -4,39 +4,61 @@ Yet another owoifier. This specific one is a port of @zuzak's JavaScript [OWO](h
 
 # Install
 
-1.  Run the command `pip install text-to-owo`.
+1.  Run the command `pip install text-to-owo` to install the package on your system.
 2.  Add `import owo` to the beginning of your script.
 
 # Usage
 
-<code>add_prefix(*str*, *prefixes=DEFAULT*)</code>
+## Constants
+
+<code>owo.PREFIXES</code>
+
+Tuple containing default prefixes
+
+<br/>
+
+<code>owo.SUFFIXES</code>
+
+Tuple containing default suffixes
+
+<br/>
+
+<code>owo.SUBSTITUTIONS</code>
+
+Dict containing default substitutions
+
+
+## Functions
+
+<code>owo.add_prefix(*str*, *prefixes=owo.PREFIXES*)</code>
 
 Appends a random prefix to the beginning and end of the string.
 Custom prefixes are optional and must be passed as an iterable.
 
 <br/>
 
-<code>add_suffix(*str*, *suffixes=DEFAULT*)</code>
+<code>owo.add_suffix(*str*, *suffixes=owo.SUFFIXES*)</code>
 
 Appends a random suffix to the beginning and end of the string.
 Custom suffixes are optional and must be passed as an iterable.
 
 <br/>
 
-<code>add_affixes(*str*, *prefixes=DEFAULT*, *suffixes=DEFAULT*)</code>
+<code>owo.add_affixes(*str*, *prefixes=owo.PREFIXES*, *suffixes=owo.SUFFIXES*)</code>
 
 Appends a random prefix and suffix to the beginning and end of the string.
 Custom prefixes and suffixes are optional and must be passed as iterables.
 
 <br/>
 
-<code>substitute(*str*, *substitutions=DEFAULT*)</code>
+<code>owo.substitute(*str*, *substitutions=owo.SUBSTITUTIONS<*)</code>
+
 Turns the text into owo speak without adding any prefixes or suffixes.
 Custom substitutions are optional and must be passed as dictionary in the form `{"key":"replacement"}`.
 
 <br/>
 
-<code>owo(*str*, *prefixes=DEFAULT*, *suffixes=DEFAULT*, *substitutions=DEFAULT*)</code>
+<code>owo.owo(*str*, *prefixes=owo.PREFIXES*, *suffixes=owo.SUFFIXES*, *substitutions=owo.SUBSTITUTIONS<*)</code>
 
 Both substitutes and adds prefixes and suffixes.
 Optional prefixes, suffixes, and substitutions are the same as in other methods.
