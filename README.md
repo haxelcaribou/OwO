@@ -51,14 +51,14 @@ Custom prefixes and suffixes are optional and must be passed as iterables.
 
 <br/>
 
-<code>owo.substitute(*str*, *substitutions=owo.SUBSTITUTIONS<*)</code>
+<code>owo.substitute(*str*, *substitutions=owo.SUBSTITUTIONS*)</code>
 
 Turns the text into owo speak without adding any prefixes or suffixes.
 Custom substitutions are optional and must be passed as dictionary in the form `{"key":"replacement"}`.
 
 <br/>
 
-<code>owo.owo(*str*, *prefixes=owo.PREFIXES*, *suffixes=owo.SUFFIXES*, *substitutions=owo.SUBSTITUTIONS<*)</code>
+<code>owo.owo(*str*, *prefixes=owo.PREFIXES*, *suffixes=owo.SUFFIXES*, *substitutions=owo.SUBSTITUTIONS*)</code>
 
 Both substitutes and adds prefixes and suffixes.
 Optional prefixes, suffixes, and substitutions are the same as in other methods.
