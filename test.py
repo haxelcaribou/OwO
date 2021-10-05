@@ -4,13 +4,6 @@ import unittest
 
 import owo
 
-# assert(owo.add_prefix(str,prefixes=("test",)) == "test"+str)
-# assert(owo.add_suffix(str,suffixes=("test",)) == str+"test")
-# assert(owo.substitute(str,substitutions={"123":"abc"}) == "abc456789")
-#
-# owo.add_suffix(str,suffixes="test")
-# owo.add_preffix(str,suffixes=("test",))
-
 
 str = "123456789"
 affix = ("abcdefg",)
