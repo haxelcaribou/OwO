@@ -30,35 +30,35 @@ Dict containing default substitutions
 
 ## Functions
 
-<code>owo.**add_prefix**(*str*, *prefixes=owo.PREFIXES*)</code>
+<code>owo.**add_prefix**(*input*, *prefixes=owo.PREFIXES*)</code>
 
 Appends a random prefix to the beginning and end of the string.
 Custom prefixes are optional and must be passed as either a list or tuple of strings.
 
 <br/>
 
-<code>owo.**add_suffix**(*str*, *suffixes=owo.SUFFIXES*)</code>
+<code>owo.**add_suffix**(*input*, *suffixes=owo.SUFFIXES*)</code>
 
 Appends a random suffix to the beginning and end of the string.
 Custom suffixes are optional and must be passed as either a list or tuple of strings.
 
 <br/>
 
-<code>owo.**add_affixes**(*str*, *prefixes=owo.PREFIXES*, *suffixes=owo.SUFFIXES*)</code>
+<code>owo.**add_affixes**(*input*, *prefixes=owo.PREFIXES*, *suffixes=owo.SUFFIXES*)</code>
 
 Appends a random prefix and suffix to the beginning and end of the string.
 Custom prefixes and suffixes are optional and must be passed as either a list or tuple of strings.
 
 <br/>
 
-<code>owo.**substitute**(*str*, *substitutions=owo.SUBSTITUTIONS*)</code>
+<code>owo.**substitute**(*input*, *substitutions=owo.SUBSTITUTIONS*)</code>
 
 Turns the text into owo speak without adding any prefixes or suffixes.
 Custom substitutions are optional and must be passed as dictionary in the form `{"key":"replacement"}`.
 
 <br/>
 
-<code>owo.**owo**(*str*, *prefixes=owo.PREFIXES*, *suffixes=owo.SUFFIXES*, *substitutions=owo.SUBSTITUTIONS*)</code>
+<code>owo.**owo**(*input*, *prefixes=owo.PREFIXES*, *suffixes=owo.SUFFIXES*, *substitutions=owo.SUBSTITUTIONS*)</code>
 
 Both substitutes and adds prefixes and suffixes.
 Optional prefixes, suffixes, and substitutions are the same as in other methods.
@@ -66,6 +66,8 @@ Optional prefixes, suffixes, and substitutions are the same as in other methods.
 <br/>
 
 For all optional arguments the given iterable/dict will replace the default values, not add to them.
+
+All functions take a single string as input and output a string.
 
 
 # Example
