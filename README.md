@@ -33,21 +33,21 @@ Dict containing default substitutions
 <code>owo.**add_prefix**(*str*, *prefixes=owo.PREFIXES*)</code>
 
 Appends a random prefix to the beginning and end of the string.
-Custom prefixes are optional and must be passed as an iterable.
+Custom prefixes are optional and must be passed as either a list or tuple of strings.
 
 <br/>
 
 <code>owo.**add_suffix**(*str*, *suffixes=owo.SUFFIXES*)</code>
 
 Appends a random suffix to the beginning and end of the string.
-Custom suffixes are optional and must be passed as an iterable.
+Custom suffixes are optional and must be passed as either a list or tuple of strings.
 
 <br/>
 
 <code>owo.**add_affixes**(*str*, *prefixes=owo.PREFIXES*, *suffixes=owo.SUFFIXES*)</code>
 
 Appends a random prefix and suffix to the beginning and end of the string.
-Custom prefixes and suffixes are optional and must be passed as iterables.
+Custom prefixes and suffixes are optional and must be passed as either a list or tuple of strings.
 
 <br/>
 
@@ -67,7 +67,6 @@ Optional prefixes, suffixes, and substitutions are the same as in other methods.
 
 For all optional arguments the given iterable/dict will replace the default values, not add to them.
 
-If you pass in variables with the wrong data types I have no idea what will happen so don't do that.
 
 # Example
 

@@ -89,23 +89,57 @@ SUBSTITUTIONS = {
 }
 
 
-def add_prefix(str, prefixes=PREFIXES):
-    return random.choice(prefixes) + str
+def add_prefix(input, prefixes=PREFIXES):
+    pre_type = type(prefixes)
+    if type(input) != str:
+        raise TypeError("Input must be a string")
+    if pre_type not in (list, tuple):
+        raise TypeError("Prefixes must be passed as a list or tuple")
+    return random.choice(prefixes) + input
 
 
-def add_suffix(str, suffixes=SUFFIXES):
-    return str + random.choice(suffixes)
+def add_suffix(input, suffixes=SUFFIXES):
+    suf_type = type(suffixes)
+    if type(input) != str:
+        raise TypeError("Input must be a string")
+    if suf_type not in (list, tuple):
+        raise TypeError("Suffixes must be passed as a list or tuple")
+    return input + random.choice(suffixes)
 
 
-def add_affixes(str, prefixes=PREFIXES, suffixes=SUFFIXES):
-    return random.choice(prefixes) + str + random.choice(suffixes)
+def add_affixes(input, prefixes=PREFIXES, suffixes=SUFFIXES):
+    pre_type = type(prefixes)
+    suf_type = type(suffixes)
+    if type(input) != str:
+        raise TypeError("Input must be a string")
+    if pre_type not in (list, tuple):
+        raise TypeError("Prefixes must be passed as a list or tuple")
+    if suf_type not in (list, tuple):
+        raise TypeError("Suffixes must be passed as a list or tuple")
+    return random.choice(prefixes) + input + random.choice(suffixes)
 
 
-def substitute(str, substitutions=SUBSTITUTIONS):
+def substitute(input, substitutions=SUBSTITUTIONS):
+    sub_type = type(substitutions)
+    if type(input) != str:
+        raise TypeError("Input must be a string")
+    if sub_type != dict:
+        raise TypeError("Suffixes must be passed as a dictionary")
     for sub in substitutions:
-        str = str.replace(sub, substitutions[sub])
-    return str
+        input = input.replace(sub, substitutions[sub])
+    return input
 
 
-def owo(str, substitutions=SUBSTITUTIONS, prefixes=PREFIXES, suffixes=SUFFIXES):
-    return add_affixes(substitute(str, substitutions=substitutions), prefixes=prefixes, suffixes=suffixes)
+def owo(input, substitutions=SUBSTITUTIONS, prefixes=PREFIXES, suffixes=SUFFIXES):
+    pre_type = type(prefixes)
+    suf_type = type(suffixes)
+    sub_type = type(substitutions)
+    if type(input) != str:
+        raise TypeError("Input must be a string")
+    if pre_type not in (list, tuple):
+        raise TypeError("Prefixes must be passed as a list or tuple")
+    if suf_type not in (list, tuple):
+        raise TypeError("Suffixes must be passed as a list or tuple")
+    if sub_type != dict:
+        raise TypeError("Suffixes must be passed as a dictionary")
+    return add_affixes(substitute(input, substitutions=substitutions), prefixes=prefixes, suffixes=suffixes)
