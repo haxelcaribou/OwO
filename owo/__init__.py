@@ -1,5 +1,9 @@
 import random
 
+__version__ = "2.0.0"
+__author__ = "Pie Thrower"
+
+
 # TODO:
 # Add blocklist for bad words
 # Simpler way to handle uppercase ~ Use .title() and .upper()?
