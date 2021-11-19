@@ -1,12 +1,10 @@
+'''owofies text'''
+
 import random
 
-__version__ = "2.0.0"
+__version__ = "2.0.1"
 __author__ = "Pie Thrower"
 
-
-# TODO:
-# Add blocklist for bad words
-# Simpler way to handle uppercase ~ Use .title() and .upper()?
 
 PREFIXES = (
     "<3 ",
@@ -103,57 +101,49 @@ SUBSTITUTIONS = {
 }
 
 
-def add_prefix(input, prefixes=PREFIXES):
-    pre_type = type(prefixes)
-    if type(input) != str:
-        raise TypeError("Input must be a string")
-    if pre_type not in (list, tuple):
+def add_prefix(input_string, prefixes=PREFIXES):
+    '''Appends a random prefix to the beginning of the string'''
+    if not isinstance(input_string, str):
+        raise TypeError("input_string must be a string")
+    if not isinstance(prefixes, (list, tuple)):
         raise TypeError("Prefixes must be passed as a list or tuple")
-    return random.choice(prefixes) + input
+    return random.choice(prefixes) + input_string
 
 
-def add_suffix(input, suffixes=SUFFIXES):
-    suf_type = type(suffixes)
-    if type(input) != str:
-        raise TypeError("Input must be a string")
-    if suf_type not in (list, tuple):
+def add_suffix(input_string, suffixes=SUFFIXES):
+    '''Appends a random suffix to the end of the string'''
+    if not isinstance(input_string, str):
+        raise TypeError("input_string must be a string")
+    if not isinstance(suffixes, (list, tuple)):
         raise TypeError("Suffixes must be passed as a list or tuple")
-    return input + random.choice(suffixes)
+    return input_string + random.choice(suffixes)
 
 
-def add_affixes(input, prefixes=PREFIXES, suffixes=SUFFIXES):
-    pre_type = type(prefixes)
-    suf_type = type(suffixes)
-    if type(input) != str:
-        raise TypeError("Input must be a string")
-    if pre_type not in (list, tuple):
+def add_affixes(input_string, prefixes=PREFIXES, suffixes=SUFFIXES):
+    '''Appends a random prefix and suffix to the beginning and end of the string'''
+    if not isinstance(input_string, str):
+        raise TypeError("input_string must be a string")
+    if not isinstance(prefixes, (list, tuple)):
         raise TypeError("Prefixes must be passed as a list or tuple")
-    if suf_type not in (list, tuple):
+    if not isinstance(suffixes, (list, tuple)):
         raise TypeError("Suffixes must be passed as a list or tuple")
-    return random.choice(prefixes) + input + random.choice(suffixes)
+    return random.choice(prefixes) + input_string + random.choice(suffixes)
 
 
-def substitute(input, substitutions=SUBSTITUTIONS):
-    sub_type = type(substitutions)
-    if type(input) != str:
-        raise TypeError("Input must be a string")
-    if sub_type != dict:
+def substitute(input_string, substitutions=None):
+    '''owofies the string without adding affixes'''
+    if not isinstance(input_string, str):
+        raise TypeError("input_string must be a string")
+    if substitutions is None:
+        substitutions = SUBSTITUTIONS
+    if not isinstance(substitutions, dict):
         raise TypeError("Suffixes must be passed as a dictionary")
     for sub in substitutions:
-        input = input.replace(sub, substitutions[sub])
-    return input
+        input_string = input_string.replace(sub, substitutions[sub])
+    return input_string
 
 
-def owo(input, substitutions=SUBSTITUTIONS, prefixes=PREFIXES, suffixes=SUFFIXES):
-    pre_type = type(prefixes)
-    suf_type = type(suffixes)
-    sub_type = type(substitutions)
-    if type(input) != str:
-        raise TypeError("Input must be a string")
-    if pre_type not in (list, tuple):
-        raise TypeError("Prefixes must be passed as a list or tuple")
-    if suf_type not in (list, tuple):
-        raise TypeError("Suffixes must be passed as a list or tuple")
-    if sub_type != dict:
-        raise TypeError("Suffixes must be passed as a dictionary")
-    return add_affixes(substitute(input, substitutions=substitutions), prefixes=prefixes, suffixes=suffixes)
+def owo(input_string, substitutions=None, prefixes=PREFIXES, suffixes=SUFFIXES):
+    '''owofies the string and adds a random prefix and suffix'''
+    return add_affixes(substitute(input_string, substitutions=substitutions),
+                       prefixes=prefixes, suffixes=suffixes)
