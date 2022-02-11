@@ -3,7 +3,7 @@
 import random
 
 __version__ = "2.0.2"
-__author__ = "Pie Thrower"
+__author__ = "Haxel Caribou"
 
 
 PREFIXES = (
